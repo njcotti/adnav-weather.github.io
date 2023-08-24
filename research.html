@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Title -->
+ <title>Automated Drone Weather Navigation</title>
+ <!-- JQuery CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <!-- Carousel Effect JQuery -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ <!-- Reloads from start -->
+ <script>history.scrollRestoration = "manual"</script>
+ <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="researchStyles.css"/>
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo rotation"><a href="https://adnav-weather.github.io/"><i class="fa fa-plane"></i></a></div>
+      <!-- List of options -->
+      <div class="menu-outer" id="menu-outer">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menu" id="menu-content">
+          <li><a href="https://adnav-weather.github.io/" onclick="closeNav()">Home</a></li>
+          <li><a href="#book" onclick="closeNav()">Books</a></li>
+          <li><a href="research.html" onclick="closeNav()">References</a></li>
+        </ul>
+      </div>
+      <div class="menu-btn" onclick="openNav()"><i class="fa fa-bars"></i></div>
+    </div>
+  </nav>
+  <!-- Research Section -->
+  <section class="research" id="research">
+    <div class="container">
+      <div class="research-content">
+        <h1 class="main-title">Research Material</h1>
+        <p>The following texts are an accumulation of material gathered throughout the duration of undertaking this project. Providing a central hub of all related documents and articles pertaining to the completion of this Capstone Project.</p>
+      </div>
+    </div>
+  </section>
+  <section class="book" id="book">
+    <div class="container">
+      <h2 class="sub-title">Books</h2>
+      <div class="carousel-book owl-carousel content">
+        <div class="card">
+          <div class="box">
+            <div class="col">
+              <img src="./images/soar.jpg"/>
+            </div>
+            <!-- Book Text section -->
+            <div class="col">
+              <h2 class="inner-sub-title">Description</h2>
+              <p class="sub-text">
+                In development for thirty years, Soar is a general cognitive architecture that integrates knowledge-intensive reasoning, reactive execution, hierarchical reasoning, planning, and learning from experience, with the goal of creating a general 
+                computational system that has the same cognitive abilities as humans. In contrast, most AI systems are designed to solve only one type of problem, such as playing chess, searching the Internet, or scheduling aircraft departures. Soar is both a 
+                software system for agent development and a theory of what computational structures are necessary to support human-level agents. Over the years, both software system and theory have evolved. This book offers the definitive presentation of Soar 
+                from theoretical and practical perspectives, providing comprehensive descriptions of fundamental aspects and new components.<br/><br/>
+                The current version of Soar features major extensions, adding reinforcement learning, semantic memory, episodic memory, mental imagery, and an appraisal-based model of emotion. This book describes details of Soar's component memories 
+                and processes and offers demonstrations of individual components, components working in combination, and real-world applications. Beyond these functional considerations, the book also proposes requirements for general cognitive architectures 
+                and explicitly evaluates how well Soar meets those requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="col">
+              <img src="./images/gna.jpg" />
+            </div>
+            <!-- Book Text section -->
+            <div class="col">
+              <h2 class="inner-sub-title">Description</h2>
+              <p class="sub-text">
+                ".... The book is a first class textbook and seems to be indispensable for everybody who has to teach combinatorial optimization. It is very helpful for students, teachers, and researchers in this area. The author finds a striking synthesis of nice 
+                and interesting mathematical results and practical applications. ... the author pays much attention to the inclusion of well-chosen exercises. The reader does not remain helpless; solutions or at least hints are given in the appendix. Except for some 
+                small basic mathematical and algorithmic knowledge the book is self-contained. ..." K.Engel, Mathematical Reviews 2002<br><br>
+                The substantial development effort of this text, involving multiple editions and trailing in the context of various workshops, university courses and seminar series, clearly shows through in this new edition with its clear writing, good organisation, 
+                comprehensive coverage of essential theory, and well-chosen applications. The proofs of important results and the representation of key algorithms in a Pascal-like notation allow this book to be used in a high-level undergraduate or low-level graduate 
+                course on graph theory, combinatorial optimization or computer science algorithms. The well-worked solutions to exercises are a real bonus for self study by students. The book is highly recommended. P .B. Gibbons, Zentralblatt für Mathematik 2005<br><br>
+                Once again, the new edition has been thoroughly revised. In particular, some further material has been added: more on NP-completeness (especially on dominating sets), a section on the Gallai-Edmonds structure theory for matchings, and about a dozen additional exercises
+                – as always, with solutions. Moreover, the section on the 1-factor theorem has been completely rewritten: it now presents a short direct proof for the more general Berge-Tutte formula. Several recent research developments are discussed and quite a few references have been added.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Section -->
+  <footer>
+    <span>
+      &copy; 2023 Automated Drone Navigation<br/><a href="https://github.com/adnav-weather/adnav-weather.github.io" target="_blank"><i class="fa">&#xf09b;</i> Github</a>
+    </span>
+  </footer>
+  <!-- Javascript -->
+  <script>
+    // Toggle menu on mobile or smaller screen
+    /* Open when someone clicks on the span element */
+    function openNav() {
+      document.getElementById("menu-outer").style.height = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+      document.getElementById("menu-outer").style.height = "0%";
+    }
+
+   // Trigger on scroll after 20px
+   function scrollHandler() {
+         const element = document.getElementById("navbar");
+
+         if (window.scrollY > 20) {
+           element.classList.add("sticky");
+         } else {
+           element.classList.remove("sticky");
+         }
+     }
+     window.addEventListener("scroll", scrollHandler);
+     window.onbeforeunload = function () {window.scrollTo(0, 0);}
+  </script>
+  <script>
+    $('.carousel-book').owlCarousel({
+        margin: 20,
+        loop: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            nav: false
+          },
+          600:{
+            items: 1,
+            nav: false
+          },
+          1000:{
+            items: 1,
+            nav: false
+          }
+        }
+    });
+ </script>
+</body>
+</html>

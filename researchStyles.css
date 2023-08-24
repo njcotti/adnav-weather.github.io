@@ -1,0 +1,110 @@
+/* Research Styling */
+.research {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    color: #f8b800;
+    background-image: url("./images/research.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.research .research-content {
+    width: 50%;
+}
+
+.main-title {
+    font-size: 60px;
+}
+
+/* Book Styling Section */
+.book {
+    background: #393E46;
+    align-items: center;
+}
+
+.book .sub-title::after {
+  content: "Books We Read";
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  padding: 5px;
+  font-size: 20px;
+  color: #F8F0E3;
+  background: #393E46;
+  transform: translateX(-50%);
+}
+
+.book .sub-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180px;
+  height: 4px;
+  background: #F8F0E3;
+  transform: translateX(-50%);
+}
+
+.book .content .col {
+  float: left;
+  width: 50%;
+  padding: 0 25px;
+}
+
+.book .content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.book .inner-sub-title {
+    padding-top: 15px;
+    color: #f8b800;
+    margin-bottom: 20px;
+}
+
+.book .sub-text {
+    color: #F8F0E3;
+}
+
+.book img {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+/* Responsive Styling */
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  .research {background-position: center;}
+  .book .sub-title::after {
+    font-size: 12px;
+    bottom: -10px;
+  }
+
+  .book .sub-title::before {height: 3px;}
+}
+
+@media screen and ( height: 600px ) {
+  .book .content .col {width: 100%;}
+}
+
+@media screen and (max-width: 1112px)  {
+  .book .content .col {width: 100%;}
+  p {
+    height: 150px;
+    overflow: auto;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1112px) {
+  .book .content .col:first-child  {
+    padding-left: 150px;
+  }
+}
+
+@media screen and (min-width: 1368px) {
+  .research {background-position: center;}
+  .book .content .col:first-child {
+    padding-left: 160px ;
+  }
+}
